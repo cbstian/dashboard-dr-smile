@@ -54,8 +54,8 @@ class FormLaratable
 	{
         $codeStatusService = config('status-form');
 
-        return '<span class="badge '. $codeStatusService[$form->status_service]["color"] .' edit-order" style="cursor:pointer;" data-id="'.$form->id.'">
-                    <i class="fas fa-edit"></i> '. ucwords($codeStatusService[$form->status_service]["texto"]) .'
+        return '<span class="badge '. $codeStatusService[$form->status_service]["color"] .' edit-order" data-id="'.$form->id.'">
+                    '. ucwords($codeStatusService[$form->status_service]["texto"]) .'
                 </span>';
 	}
 }

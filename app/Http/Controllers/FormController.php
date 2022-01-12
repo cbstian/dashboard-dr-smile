@@ -9,6 +9,7 @@ use App\Models\Form;
 use App\Exports\FormExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class FormController extends Controller
 {
@@ -45,18 +46,40 @@ class FormController extends Controller
         ]);
     }
 
-    public function storePublic()
+    public function storePublic(Request $request)
     {
-        $form = new Form();
-        $form->name = 'demoPUBLIC';
-        $form->lastname = 'lastnamePUBLIC';
-        $form->phone = '1111PUBLIC';
-        $form->email = 'demoPUBLIC@drsmile.cl';
-        $form->commune_string = "COMMUNE";
-        $form->details = 'asdsad';
-        $form->status_service = 0;
-        $form->campaign = "";
-        $form->save();
+        $rules = [
+            'name'              => 'required',
+            'lastname'          => 'required',
+            'phone'             => 'required',
+            'email'             => 'required',
+            'commune_string'    => 'required'
+        ];
+
+        $messages = [
+            '*.required' => 'El :attribute es un campo requerido.',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+
+            return false;
+
+        }else{
+
+            $form = new Form();
+            $form->name = $request->input('name',null);
+            $form->lastname = $request->input('lastname',null);
+            $form->phone = $request->input('phone',null);
+            $form->email = $request->input('email',null);
+            $form->commune_string = $request->input('commune_string',null);
+            $form->details = $request->input('details',null);
+            $form->status_service = 0;
+            $form->campaign = $request->input('campaign',null);
+            $form->save();
+
+        }
 
         return true;
     }

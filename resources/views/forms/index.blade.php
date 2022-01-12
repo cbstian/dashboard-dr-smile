@@ -84,7 +84,7 @@
                         <i class="fas fa-database mr-1"></i>
                         <h3 class="card-title">Registros</h3>
                         <div class="card-tools">
-                            <button type="button" class="mt-sm-0 mt-2 mt-md-0 btn btn-info btn-sm" title="Ingresar solicitud" id="btn-modal-add-order">
+                            <button type="button" class="d-none mt-sm-0 mt-2 mt-md-0 btn btn-info btn-sm" title="Ingresar solicitud" id="btn-modal-add-order">
                                 <i class="fas fa-plus-circle"></i> Ingresar solicitud
                             </button>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
