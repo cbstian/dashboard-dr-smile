@@ -52,7 +52,7 @@ class FormController extends Controller
             'name'              => 'required',
             'lastname'          => 'required',
             'phone'             => 'required',
-            'email'             => 'required',
+            'email'             => 'required |email',
             'commune_string'    => 'required'
         ];
 
