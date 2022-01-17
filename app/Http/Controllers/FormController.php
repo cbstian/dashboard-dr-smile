@@ -52,6 +52,7 @@ class FormController extends Controller
             'name'              => 'required',
             'lastname'          => 'required',
             'phone'             => 'required',
+            'rut'               => 'required',
             'email'             => 'required |email',
             'commune_string'    => 'required'
         ];
@@ -77,6 +78,8 @@ class FormController extends Controller
             $form->details = $request->input('details',null);
             $form->status_service = 0;
             $form->campaign = $request->input('campaign',null);
+            $form->rut = $request->input('rut',null);
+            $form->region_id = 7;
             $form->save();
 
         }

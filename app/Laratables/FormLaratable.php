@@ -2,6 +2,8 @@
 
 namespace App\Laratables;
 
+use App\Models\Region;
+
 class FormLaratable
 {
     public static function laratablesQueryConditions($query)
@@ -42,6 +44,13 @@ class FormLaratable
 	{
 		return $form->created_at->format('d-m-Y');
 	}
+
+    public static function  laratablesCustomRegion($form)
+    {
+        if (!is_null($form->region_id)) {
+            return Region::find($form->region_id)->region;
+        }
+    }
 
     public static function laratablesRowClass($form)
     {

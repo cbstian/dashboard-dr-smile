@@ -90,7 +90,9 @@ var moduloForm = function(){
                     { name: 'name'},
                     { name: 'lastname'},
                     { name: 'phone' },
+                    { name: 'rut' },
                     { name: 'email' },
+                    { name: 'region' },
                     { name: 'commune_string'},
                     { name: 'details'},
                     { name: 'campaign'},
@@ -98,7 +100,7 @@ var moduloForm = function(){
                     { name: 'estado', orderable: false, searchable: false}
                 ],
                 order : [
-                    [8, "desc" ]
+                    [10, "desc" ]
                 ],
                 serverSide: true,
                 responsive: true,

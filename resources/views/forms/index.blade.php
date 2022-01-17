@@ -102,7 +102,9 @@
                                     <th>Nombre</th>
                                     <th>Apellido</th>
                                     <th>Teléfono</th>
+                                    <th>RUT</th>
                                     <th>Email</th>
+                                    <th>Region</th>
                                     <th>Comuna</th>
                                     <th>Comentario</th>
                                     <th>Campaña</th>
