@@ -37,7 +37,7 @@ class FormLaratable
 
     public static function laratablesAdditionalColumns()
 	{
-        return ['created_at','status_service','commune_string'];
+        return ['created_at','status_service','commune_string','region_id'];
     }
 
     public static function laratablesCustomCreatedAt($form)
@@ -50,6 +50,13 @@ class FormLaratable
         if (!is_null($form->region_id)) {
             return Region::find($form->region_id)->region;
         }
+
+        return '-';
+    }
+
+    public static function laratablesOrderRegion()
+    {
+        return 'region_id';
     }
 
     public static function laratablesRowClass($form)
