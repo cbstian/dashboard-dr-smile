@@ -1,11 +1,11 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/form.js": "/js/form.js",
-    "/css/daterangepicker.css": "/css/daterangepicker.css",
-    "/css/bootstrap-datepicker3.css": "/css/bootstrap-datepicker3.css",
-    "/js/bootstrap-datepicker3.js": "/js/bootstrap-datepicker3.js",
-    "/js/core.js": "/js/core.js",
-    "/js/daterangepicker.js": "/js/daterangepicker.js",
-    "/css/select2.css": "/css/select2.css",
-    "/js/select2.js": "/js/select2.js"
+    "/js/app.js": "/js/app.js?id=d41d8cd98f00b204e980",
+    "/js/form.js": "/js/form.js?id=1b20906cff190592b156",
+    "/css/daterangepicker.css": "/css/daterangepicker.css?id=55e1d560821b4a4b141b",
+    "/css/bootstrap-datepicker3.css": "/css/bootstrap-datepicker3.css?id=dffa79e5aff4e6885eaf",
+    "/js/bootstrap-datepicker3.js": "/js/bootstrap-datepicker3.js?id=33faca6ece9aa68d881b",
+    "/js/core.js": "/js/core.js?id=9d777dbdbd0cd89282e8",
+    "/js/daterangepicker.js": "/js/daterangepicker.js?id=9d777dbdbd0cd89282e8",
+    "/css/select2.css": "/css/select2.css?id=e6de4a7c42df8ed98269",
+    "/js/select2.js": "/js/select2.js?id=30ab4c75175b335130fc"
 }
