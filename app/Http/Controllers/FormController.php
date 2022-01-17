@@ -10,6 +10,7 @@ use App\Exports\FormExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class FormController extends Controller
 {
@@ -69,10 +70,18 @@ class FormController extends Controller
 
         }else{
 
+            $phone = Str::replace(' ', '', trim($request->input('phone',null)));
+
+            $contains = Str::contains( $phone, '+569');
+
+            if (!$contains) {
+                $phone .= '+569 '.$phone;
+            }
+
             $form = new Form();
             $form->name = $request->input('name',null);
             $form->lastname = $request->input('lastname',null);
-            $form->phone = $request->input('phone',null);
+            $form->phone = $phone;
             $form->email = $request->input('email',null);
             $form->commune_string = $request->input('commune_string',null);
             $form->details = $request->input('details',null);
