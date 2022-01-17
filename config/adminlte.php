@@ -231,6 +231,12 @@ return [
             'text' => 'Formularios',
             'url'  => 'forms',
             'icon' => 'fas fa-fw fa-user',
+        ],
+        ['header' => 'ANÁLISIS'],
+        [
+            'text' => 'Análisis',
+            'url'  => 'analisisVisitas',
+            'icon' => 'fas fa-fw fa-chart-bar',
         ]
     ],
 

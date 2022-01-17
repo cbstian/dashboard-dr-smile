@@ -13,4 +13,6 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::post('forms/datatable','FormController@datatable');
     Route::post('forms/export','FormController@export');
 
+    Route::get('analisisVisitas','AnalisisController@umami');
+
 });
