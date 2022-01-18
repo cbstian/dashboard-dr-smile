@@ -188,7 +188,7 @@ class FormController extends Controller
             'rut'        => 'required',
             'email'      => 'required|email|confirmed',
             'region_id'  => 'required|not_in:0',
-            'commune_id' => 'required|not_in:0',
+            'commune_id' => 'nullable',
             'campaign'   => 'required|not_in:0',
             'status_service' => 'required',
             'details' => 'nullable',
