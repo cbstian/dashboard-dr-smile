@@ -214,7 +214,7 @@ class FormController extends Controller
         $form->lastname = $request->input('lastname',null);
         $form->phone = $phone;
         $form->email = $request->input('email',null);
-        $form->commune_id = $request->input('commune_id',null);
+        $form->commune_id = ((int) $request->input('commune_id') == 0)? null : $request->input('commune_id',null);
         $form->region_id = $request->input('region_id',null);
         $form->details = $request->input('details',null);
         $form->status_service = $request->input('status_service',null);
