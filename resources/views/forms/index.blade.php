@@ -84,7 +84,7 @@
                         <i class="fas fa-database mr-1"></i>
                         <h3 class="card-title">Registros</h3>
                         <div class="card-tools">
-                            <button type="button" class="mt-sm-0 mt-2 mt-md-0 btn btn-info btn-sm" title="Ingresar solicitud" id="btn-modal-add-order">
+                            <button type="button" class="mt-sm-0 mt-2 mt-md-0 btn btn-info btn-sm" title="Ingresar solicitud" id="btn-modal-add-form">
                                 <i class="fas fa-plus-circle"></i> Ingresar solicitud
                             </button>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-add-order" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal fade" id="modal-add-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content" style="background-color: #F4F6F9;">
@@ -130,15 +130,16 @@
                 </div>
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ingreso manual solicitud</h5>
-                    <button type="button" class="close close-modal-order">
+                    <button type="button" class="close close-modal-form">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="data"></div>
+                    <div class="alert alert-danger text-left d-none mt-2" role="alert"></div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-secondary close-modal-order">Cerrar</button>
+                    <button type="button" class="btn btn-secondary close-modal-form">Cerrar</button>
                     <button type="button" class="btn btn-primary" id="btn-manual-entry">
                         <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                         Guardar
@@ -148,7 +149,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-edit-order" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal fade" id="modal-edit-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content" style="background-color: #F4F6F9;">
@@ -157,40 +158,20 @@
                 </div>
                 <div class="modal-header">
                     <h4 class="modal-title" id="exampleModalLabel">Actualizar solicitud</h4>
-                    <button type="button" class="close close-modal-edit-order">
+                    <button type="button" class="close close-modal-edit-form">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-8 data">
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Registro de actividad</h3>
-                                </div>
-                                <div class="card-body" id="card-data-log" style="max-height: 70vh; overflow-y: auto;">
-                                    <div class="overlay d-none overlay-logs">
-                                        <i class="fas fa-2x fa-sync fa-spin"></i>
-                                    </div>
-                                    <div class="data-logs"></div>
-                                </div>
-                                <div class="card-footer">
-                                    <b>Añadir nota:</b>
-                                    <form id="form-add-log-order">
-                                        <div class="input-group input-group-sm">
-                                            <input type="hidden" name="id" value="">
-                                            <input type="text" name="details" placeholder="Añadir nota privada" class="form-control form-control-sm">
-                                            <span class="input-group-append">
-                                                <button type="submit" class="btn btn-secondary btn-sm" style="height: 31px;">Guardar</button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="data"></div>
+                    <div class="alert alert-danger text-left d-none mt-2" role="alert"></div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-secondary close-modal-edit-form">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btn-update-form">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        Actualizar
+                    </button>
                 </div>
             </div>
         </div>

@@ -6,10 +6,11 @@ var moduloForm = function(){
         urlAjax : $("body").data("url"),
         tableOrders : "#datatable",
         btnFilter : "#filter_btn",
-        btnModalAddOrder : "#btn-modal-add-order",
-        btnCloseModalOrder : ".close-modal-order",
-        btnCloseModalEditOrder : ".close-modal-edit-order",
+        btnModalAddForm : "#btn-modal-add-form",
+        btnCloseModalForm : ".close-modal-form",
+        btnCloseModalEditForm : ".close-modal-edit-form",
         btnManualEntry : "#btn-manual-entry",
+        btnUpdateForm : "#btn-update-form",
         formLogsOrder : "#form-add-log-order",
         btnExportOrders : "#export_btn"
 
@@ -23,10 +24,11 @@ var moduloForm = function(){
         dom.url = valores.urlAjax;
         dom.tableOrders = $(valores.tableOrders);
         dom.btnFilter = $(valores.btnFilter);
-        dom.btnModalAddOrder = $(valores.btnModalAddOrder);
-        dom.btnCloseModalOrder = $(valores.btnCloseModalOrder);
-        dom.btnCloseModalEditOrder = $(valores.btnCloseModalEditOrder);
+        dom.btnModalAddForm = $(valores.btnModalAddForm);
+        dom.btnCloseModalForm = $(valores.btnCloseModalForm);
+        dom.btnCloseModalEditForm = $(valores.btnCloseModalEditForm);
         dom.btnManualEntry = $(valores.btnManualEntry);
+        dom.btnUpdateForm = $(valores.btnUpdateForm);
         dom.formLogsOrder = $(valores.formLogsOrder);
         dom.btnExportOrders = $(valores.btnExportOrders);
 
@@ -39,13 +41,12 @@ var moduloForm = function(){
         });
 
         eventos.loadDaterangepicker();
-        eventos.loadSelect2();
         eventos.datatable();
-
-        dom.btnModalAddOrder.click( eventos.modalAddOrder );
-        dom.btnCloseModalOrder.click( eventos.closeModalOrder );
-        dom.btnCloseModalEditOrder.click( eventos.closeModalEditOrder );
+        dom.btnModalAddForm.click( eventos.modalAddForm );
+        dom.btnCloseModalForm.click( eventos.closeModalForm );
+        dom.btnCloseModalEditForm.click( eventos.closeModalEditForm );
         dom.btnManualEntry.click( eventos.submitManualEntry );
+        dom.btnUpdateForm.click( eventos.updateForm );
         dom.btnExportOrders.click( eventos.exportDataOrders );
 
     };
@@ -93,7 +94,7 @@ var moduloForm = function(){
                     { name: 'rut' },
                     { name: 'email' },
                     { name: 'region' },
-                    { name: 'commune_string'},
+                    { name: 'commune_id'},
                     { name: 'details'},
                     { name: 'campaign'},
                     { name: 'created_at'},
@@ -116,7 +117,7 @@ var moduloForm = function(){
                         d.filter_campaign = $("#filter_campaign").val();
                     },
                     complete: function(){
-                        //$('.edit-order').click(eventos.modelEditOrder);
+                        $('.edit-form').click(eventos.modelEditOrder);
                     }
                 }
             });
@@ -169,46 +170,23 @@ var moduloForm = function(){
 
         },
 
-        loadSelect2 : function() {
+        modalAddForm : function() {
 
-            $('select[name="filter_user"]').select2();
-
-        },
-
-        modalAddOrder : function() {
-
-            $("#modal-add-order").modal("show");
-
-            user_id = null;
+            $("#modal-add-form").modal("show");
 
             $.ajax({
-                url     : dom.url + '/admin/orders/create',
+                url     : dom.url + '/forms/create',
                 type    : 'POST',
-                data: {
-                    id : user_id
-                },
                 beforeSend : function(jqXHR, settings){
 
-                    $("#modal-add-order #alert-danger").addClass("d-none");
-                    $('#modal-add-order .overlay-modal').removeClass('d-none');
+                    $("#modal-add-form .alert-danger").addClass("d-none");
+                    $('#modal-add-form .overlay-modal').removeClass('d-none');
 
                 },
                 success : function(data){
 
-                    $("#modal-add-order .modal-body .data").html(data);
+                    $("#modal-add-form .modal-body .data").html(data);
                     $("select[name=region_id]").change(eventos.getCommunes);
-                    $("#select_examns").select2();
-
-                    var $select2 = $('#select_examns').select2({
-                        placeholder: 'Seleccione los exámenes'
-                    });
-
-                    $select2.on("change", function (e) {
-                        ids= $(this).val();
-                        eventos.calculatePriceExams(ids);
-                    });
-
-                    eventos.uploadFile();
 
                 },
                 complete : function(jqXHR, textStatus){
@@ -216,7 +194,7 @@ var moduloForm = function(){
                     setTimeout(
                         function()
                         {
-                            $('#modal-add-order .overlay-modal').addClass('d-none');
+                            $('#modal-add-form .overlay-modal').addClass('d-none');
                         }, 1000);
 
                 },
@@ -226,91 +204,52 @@ var moduloForm = function(){
                         location.reload();
 
                 }
+            });
+
+        },
+
+        getCommunes : function() {
+
+            $.ajax({
+                url : dom.url + "/location/communes",
+                data : {
+                    id : $("select[name=region_id]").val()
+                },
+                type : 'POST',
+                beforeSend : function(jqXHR, settings){},
+                success : function(data){
+
+                    $("select[name=commune_id]").html(data);
+
+                },
+                complete : function(jqXHR, textStatus){},
+                error : function(xhr, status){}
             });
 
         },
 
         modelEditOrder : function() {
 
-            $("#modal-edit-order").modal("show");
+            $("#modal-edit-form").modal("show");
 
-            order_id = $(this).data('id');
+            form_id = $(this).data('id');
 
             $.ajax({
-                url     : dom.url + '/admin/orders/edit',
+                url     : dom.url + '/forms/edit',
                 type    : 'POST',
                 data: {
-                    id : order_id
+                    id : form_id
                 },
                 beforeSend : function(jqXHR, settings){
 
-                    $("#modal-edit-order #alert-danger").addClass("d-none");
-                    $('#modal-edit-order .overlay-modal').removeClass('d-none');
+                    $("#modal-edit-form .alert-danger").addClass("d-none");
+                    $('#modal-edit-form .overlay-modal').removeClass('d-none');
 
                 },
                 success : function(data){
 
-                    $("#modal-edit-order .modal-body .data").html(data);
+                    $("#modal-edit-form .modal-body .data").html(data);
                     $("select[name=region_id]").change(eventos.getCommunes);
-                    $("#select_examns").select2();
-
-                    var $select2 = $('#select_examns').select2({
-                        placeholder: 'Seleccione los exámenes'
-                    });
-
-                    $select2.on("change", function (e) {
-                        ids= $(this).val();
-                        eventos.calculatePriceExams(ids);
-                    });
-
-                    $select2.trigger('change');
-
-                    $('#modal-edit-order input[name="date"]').daterangepicker({
-                        "locale": {
-                            "format": "YYYY-MM-DD",
-                            "separator": " hasta ",
-                            "applyLabel": "Aplicar",
-                            "cancelLabel": "Cancelar",
-                            "fromLabel": "Desde",
-                            "toLabel": "Hasta",
-                            "customRangeLabel": "Personalizado",
-                            "weekLabel": "W",
-                            "daysOfWeek": [
-                                "Do",
-                                "Lu",
-                                "Ma",
-                                "Mi",
-                                "Ju",
-                                "Vi",
-                                "Sa"
-                            ],
-                            "monthNames": [
-                                "Enero",
-                                "Febrero",
-                                "Marzo",
-                                "Abril",
-                                "Mayo",
-                                "Junio",
-                                "Julio",
-                                "Agosto",
-                                "Septiembre",
-                                "Octubre",
-                                "Noviembre",
-                                "Diciembre",
-                            ],
-                            "firstDay": 1
-                        },
-                        singleDatePicker: true,
-                        minYear: parseInt(moment().format('YYYY'),10),
-                        maxYear: parseInt(moment().format('YYYY'),10)
-                    });
-
-                    eventos.getDataLogs(order_id);
-
-                    $(".btn-update-order").on('click', eventos.updateOrder );
-
-                    eventos.uploadFile(order_id);
-                    eventos.uploadResultExamFile(order_id);
 
                 },
                 complete : function(jqXHR, textStatus){
@@ -318,7 +257,7 @@ var moduloForm = function(){
                     setTimeout(
                         function()
                         {
-                            $('#modal-edit-order .overlay-modal').addClass('d-none');
+                            $('#modal-edit-form .overlay-modal').addClass('d-none');
                         }, 1000);
 
                 },
@@ -332,34 +271,34 @@ var moduloForm = function(){
 
         },
 
-        closeModalOrder : function() {
-            $("#modal-add-order .modal-body .data").html('');
-            $("#modal-add-order").modal("hide");
+        closeModalForm : function() {
+            $("#modal-add-form .modal-body .data").html('');
+            $("#modal-add-form").modal("hide");
         },
 
-        closeModalEditOrder : function() {
-            $("#modal-edit-order .modal-body .data").html('');
-            $("#modal-edit-order").modal("hide");
+        closeModalEditForm : function() {
+            $("#modal-edit-form .modal-body .data").html('');
+            $("#modal-edit-form").modal("hide");
         },
 
         submitManualEntry : function() {
 
             $.ajax({
-                url     : window.location.origin+"/admin/orders/storeManual",
+                url     : window.location.origin+"/forms/store",
                 data    : $("#form-manual-entry").serialize(),
                 type    : 'POST',
                 dataType: "json",
                 beforeSend : function(jqXHR, settings){
 
-                    $("#modal-add-order .alert-danger").addClass("d-none");
-                    $('#modal-add-order .overlay-modal').removeClass('d-none');
+                    $("#modal-add-form .alert-danger").addClass("d-none");
+                    $('#modal-add-form .overlay-modal').removeClass('d-none');
                     $("#btn-manual-entry").attr('disabled',false);
                     $("#btn-manual-entry .spinner-border").removeClass("d-none");
 
                 },
                 success : function(data){
 
-                    $("#modal-add-order").modal("hide");
+                    $("#modal-add-form").modal("hide");
                     dom.btnFilter.trigger('click');
 
                     location.reload();
@@ -372,7 +311,7 @@ var moduloForm = function(){
                         {
                             $("#btn-manual-entry").attr('disabled',false);
                             $("#btn-manual-entry .spinner-border").addClass("d-none");
-                            $('#modal-add-order .overlay-modal').addClass('d-none');
+                            $('#modal-add-form .overlay-modal').addClass('d-none');
                         }, 1000);
 
                 },
@@ -380,7 +319,7 @@ var moduloForm = function(){
 
                     if (jqXHR.status == 422){
 
-                        $("#modal-add-order .alert-danger").removeClass("d-none");
+                        $("#modal-add-form .alert-danger").removeClass("d-none");
 
                         response = jqXHR.responseJSON;
 
@@ -390,7 +329,7 @@ var moduloForm = function(){
                         });
                         html += "</ul>";
 
-                        $("#modal-add-order .alert-danger").html(html);
+                        $("#modal-add-form .alert-danger").html(html);
 
                     }else{
 
@@ -404,7 +343,7 @@ var moduloForm = function(){
 
         },
 
-        updateOrder : function (e) {
+        updateForm : function (e) {
 
             e.preventDefault();
 
@@ -424,33 +363,23 @@ var moduloForm = function(){
                     form = $(this).data('form');
 
                     $.ajax({
-                        url     : window.location.origin+"/admin/orders/update",
-                        data    : $("#"+form).serialize(),
+                        url     : window.location.origin+"/forms/update",
+                        data    : $("#form-update-entry").serialize(),
                         type    : 'POST',
                         dataType: "json",
                         beforeSend : function(jqXHR, settings){
 
-                            $("#modal-edit-order .alert-danger").addClass("d-none");
-                            $('#modal-edit-order .overlay-modal').removeClass('d-none');
-                            $("#btn-update-order").attr('disabled',false);
-                            $("#btn-update-order .spinner-border").removeClass("d-none");
+                            $("#modal-edit-form .alert-danger").addClass("d-none");
+                            $('#modal-edit-form .overlay-modal').removeClass('d-none');
+                            $("#btn-update-form").attr('disabled',false);
+                            $("#btn-update-form .spinner-border").removeClass("d-none");
 
                         },
                         success : function(data){
 
-                            if (data.id == false) {
-
-                                dom.btnFilter.trigger('click');
-                                eventos.getDataLogs(data.id);
-                                Swal.fire('Error!', data.error, 'error');
-
-                            } else {
-
-                                dom.btnFilter.trigger('click');
-                                eventos.getDataLogs(data.id);
-                                Swal.fire('Correcto!', '', 'success');
-
-                            }
+                            //$("#modal-edit-form").modal("hide");
+                            dom.btnFilter.trigger('click');
+                            Swal.fire('Correcto!', '', 'success');
 
                         },
                         complete : function(jqXHR, textStatus){
@@ -458,9 +387,9 @@ var moduloForm = function(){
                             setTimeout(
                                 function()
                                 {
-                                    $("#btn-update-order").attr('disabled',false);
-                                    $("#btn-update-order .spinner-border").addClass("d-none");
-                                    $('#modal-edit-order .overlay-modal').addClass('d-none');
+                                    $("#btn-update-form").attr('disabled',false);
+                                    $("#btn-update-form .spinner-border").addClass("d-none");
+                                    $('#modal-edit-form .overlay-modal').addClass('d-none');
                                 }, 1000);
 
                         },

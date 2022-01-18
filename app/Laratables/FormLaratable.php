@@ -3,6 +3,7 @@
 namespace App\Laratables;
 
 use App\Models\Region;
+use App\Models\Commune;
 
 class FormLaratable
 {
@@ -37,7 +38,7 @@ class FormLaratable
 
     public static function laratablesAdditionalColumns()
 	{
-        return ['created_at','status_service','commune_string','region_id'];
+        return ['created_at','status_service','commune_string','region_id','commune_id'];
     }
 
     public static function laratablesCustomCreatedAt($form)
@@ -49,6 +50,19 @@ class FormLaratable
     {
         if (!is_null($form->region_id)) {
             return Region::find($form->region_id)->region;
+        }
+
+        return '-';
+    }
+
+    public static function  laratablesCustomCommuneId($form)
+    {
+        if (!is_null($form->commune_id)) {
+            return Commune::find($form->commune_id)->commune;
+        }
+
+        if (is_null($form->commune_id) AND !is_null($form->commune_string)) {
+            return $form->commune_string;
         }
 
         return '-';
@@ -70,8 +84,8 @@ class FormLaratable
 	{
         $codeStatusService = config('status-form');
 
-        return '<span class="badge '. $codeStatusService[$form->status_service]["color"] .' edit-order" data-id="'.$form->id.'">
-                    '. ucwords($codeStatusService[$form->status_service]["texto"]) .'
+        return '<span class="badge '. $codeStatusService[$form->status_service]["color"] .' edit-form" style="cursor:pointer;" data-id="'.$form->id.'">
+                    <i class="fas fa-edit"></i> '. ucwords($codeStatusService[$form->status_service]["texto"]) .'
                 </span>';
 	}
 }
