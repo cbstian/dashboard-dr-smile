@@ -185,7 +185,7 @@ class FormController extends Controller
             'name'       => 'required',
             'lastname'   => 'required',
             'phone'      => 'required',
-            'rut'        => 'required|cl_rut',
+            'rut'        => 'required',
             'email'      => 'required|email|confirmed',
             'region_id'  => 'required|not_in:0',
             'commune_id' => 'required|not_in:0',
@@ -197,7 +197,6 @@ class FormController extends Controller
         $messages = [
             '*.required' => 'El :attribute es un campo requerido.',
             '*.not_in' => 'El :attribute es un campo requerido.',
-            'rut.cl_rut' => 'El RUT no es válido',
         ];
 
         Validator::make($request->all(), $rules, $messages)->validate();
