@@ -2,6 +2,7 @@ const mix = require('laravel-mix');
 
 mix.scripts(['resources/js/app.js'], 'public/js/app.js')
     .scripts(['resources/js/form.js'], 'public/js/form.js')
+    .scripts(['resources/js/dashboard.js'], 'public/js/dashboard.js')
 
     .styles([
         'node_modules/daterangepicker/daterangepicker.css'

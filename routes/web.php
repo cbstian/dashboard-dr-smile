@@ -9,6 +9,7 @@ Route::post('form/store/public','FormController@storePublic');
 
 Route::middleware(['auth','verified'])->group(function () {
 
+    Route::get('dashboard','DashboardController@index');
     Route::get('forms','FormController@index');
     Route::post('forms/datatable','FormController@datatable');
     Route::post('forms/export','FormController@export');
@@ -18,5 +19,10 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::post('forms/update','FormController@update');
     Route::post('location/communes','LocationController@getCommunes');
     Route::get('analisisVisitas','AnalisisController@umami');
+
+    Route::post('dashboard/grafico1','DashboardController@grafico1');
+    Route::post('dashboard/grafico2','DashboardController@grafico2');
+    Route::post('dashboard/grafico3','DashboardController@grafico3');
+    Route::post('dashboard/grafico4','DashboardController@grafico4');
 
 });

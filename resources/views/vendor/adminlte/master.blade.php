@@ -22,8 +22,6 @@
     {{-- Custom stylesheets (pre AdminLTE) --}}
     @yield('adminlte_css_pre')
 
-    @notifyCss
-
     {{-- Base Stylesheets --}}
     @if(!config('adminlte.enabled_laravel_mix'))
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
@@ -79,9 +77,6 @@
 
     {{-- Body Content --}}
     @yield('body')
-
-    <x:notify-messages />
-    @notifyJs
 
     {{-- Base Scripts --}}
     @if(!config('adminlte.enabled_laravel_mix'))

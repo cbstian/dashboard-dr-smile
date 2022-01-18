@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'forms',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => false,
@@ -226,6 +226,12 @@ return [
 
     'menu' => [
 
+        ['header' => 'DASHBOARD'],
+        [
+            'text' => 'Inicio',
+            'url'  => 'dashboard',
+            'icon' => 'fas fa-fw fa-tachometer-alt',
+        ],
         ['header' => 'REGISTROS'],
         [
             'text' => 'Formularios',
