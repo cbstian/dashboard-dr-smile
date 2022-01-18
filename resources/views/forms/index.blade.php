@@ -7,6 +7,12 @@
 @stop
 
 @section('css')
+    @notifyCss
+    <style>
+        .notify{
+            z-index: 999999 !important;
+        }
+    </style>
     <link rel="stylesheet" href="{{ mix('css/daterangepicker.css') }}">
 @endsection
 
@@ -179,6 +185,8 @@
 @stop
 
 @section('js')
+    <x:notify-messages />
+    @notifyJs
     <script src="{{ mix('js/daterangepicker.js') }}"></script>
     <script src="{{ mix('js/form.js') }}"></script>
 @endsection

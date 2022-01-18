@@ -251,6 +251,29 @@ var moduloForm = function(){
                     $("#modal-edit-form .modal-body .data").html(data);
                     $("select[name=region_id]").change(eventos.getCommunes);
 
+                    $("#btn-form-destroy").on('click',function(){
+
+                        Swal.fire({
+                            title: 'Eliminar',
+                            text: "¿Deseas eliminar el formulario?",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Eliminar',
+                            cancelButtonText: 'Cancelar'
+                        }).then((result) => {
+
+                            if (result.isConfirmed) {
+                                $("#form-destroy").submit();
+                            } else {
+                                return false;
+                            }
+
+                        });
+
+                    });
+
                 },
                 complete : function(jqXHR, textStatus){
 
@@ -345,7 +368,7 @@ var moduloForm = function(){
 
         updateForm : function (e) {
 
-            e.preventDefault();
+            e.preventDefault()();
 
             Swal.fire({
                 title: 'Actualizar',

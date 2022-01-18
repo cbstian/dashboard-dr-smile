@@ -17,6 +17,7 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::post('forms/edit','FormController@edit');
     Route::post('forms/store','FormController@store');
     Route::post('forms/update','FormController@update');
+    Route::post('forms/destroy','FormController@destroy');
     Route::post('location/communes','LocationController@getCommunes');
     Route::get('analisisVisitas','AnalisisController@umami');
 

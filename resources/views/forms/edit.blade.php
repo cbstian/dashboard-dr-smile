@@ -97,3 +97,21 @@
         </div>
     </div>
 </form>
+
+<form action="{{ url('forms/destroy') }}" id="form-destroy" method="POST">
+    @csrf
+    <input type="hidden" name="id" value="{{ $form->id }}">
+</form>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Eliminar formulario</h3>
+    </div>
+    <div class="card-body">
+        <p>¿Deseas eliminar el formulario?</p>
+
+        <button type="button" class="btn btn-danger" id="btn-form-destroy">
+            Eliminar
+        </button>
+    </div>
+</div>

@@ -144,7 +144,6 @@ class FormController extends Controller
         $form->save();
 
         return json_encode(['ok']);
-
     }
 
     public function create()
@@ -226,5 +225,14 @@ class FormController extends Controller
 
         return json_encode(['ok']);
 
+    }
+
+    public function destroy(Request $request)
+    {
+        Form::findOrFail($request->id)->delete();
+
+        notify()->success('Formulario eliminado correctamente!', 'Correcto');
+
+        return redirect('forms');
     }
 }
