@@ -76,7 +76,7 @@ class FormController extends Controller
             $contains = Str::contains( $phone, '+569');
 
             if (!$contains) {
-                $phone .= '+569 '.$phone;
+                $phone = '+569 '.$phone;
             }
 
             $form = new Form();
@@ -125,7 +125,7 @@ class FormController extends Controller
         $contains = Str::contains( $phone, '+569');
 
         if (!$contains) {
-            $phone .= '+569 '.$phone;
+            $phone = '+569 '.$phone;
         }
 
         $form = new Form();
