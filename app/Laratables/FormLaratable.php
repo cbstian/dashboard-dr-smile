@@ -68,6 +68,17 @@ class FormLaratable
         return '-';
     }
 
+    public static function laratablesSearchRegion($query, $searchValue)
+	{
+        $region = Region::where('region','like','%'.$searchValue.'%')->first();
+
+        if($region) {
+            return $query->orWhere('forms.region_id', $region->id);
+        } else {
+            return $query;
+        }
+    }
+
     public static function laratablesOrderRegion()
     {
         return 'region_id';

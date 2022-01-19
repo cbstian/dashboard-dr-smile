@@ -368,8 +368,6 @@ var moduloForm = function(){
 
         updateForm : function (e) {
 
-            e.preventDefault()();
-
             Swal.fire({
                 title: 'Actualizar',
                 text: "¿Deseas actualizar los datos?",
