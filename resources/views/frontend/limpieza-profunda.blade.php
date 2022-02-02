@@ -134,7 +134,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body text-center py-5">
-                    <h1>Texto al enviar el formulario</h1>
+                    <h1>Tu solicitud de promoción ha sido ingresada con exito; nuestros especialistas se pondrán en contacto contigo</h1>
                     <button type="button" class="btn btn-primary mt-5" data-bs-dismiss="modal">Aceptar</button>
                 </div>
             </div>
