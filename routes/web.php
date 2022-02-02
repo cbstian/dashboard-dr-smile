@@ -27,3 +27,9 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::post('dashboard/grafico4','DashboardController@grafico4');
 
 });
+
+Route::prefix('landing')->group(function () {
+
+    Route::get('limpiezaprofunda','Landing\LandingController@limpiezaProfunda');
+
+});
