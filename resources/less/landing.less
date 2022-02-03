@@ -4,6 +4,69 @@ body{
 
 #limpiezaprofunda {
 
+    .bg-blue {
+        background-color: #89B2EF;
+    }
+
+    .bg-rosa {
+        background-color: #DFADE8;
+        color: #fff;
+
+        .container-phone {
+
+            width: 400px;
+
+            a {
+                margin-top: 4px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+            img, a:first-child {
+                margin-right: 10px;
+                float: left;
+            }
+
+            a:last-child {
+                margin-left: 13px;
+                float: left;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .container-phone {
+
+                width: 100%;
+                text-align: center;
+
+                a {
+                    font-size: 14px;
+                    width: 100%;
+                    display: block;
+                }
+
+                img {
+                    display: none;
+                }
+
+                a:first-child {
+                    margin-right: 0px;
+                    float: none;
+                }
+
+                a:last-child {
+                    margin-left: 0px;
+                    float: none;
+                }
+
+            }
+
+        }
+    }
+
     font-family: 'Nunito', sans-serif;
 
     .contenedor-superior {

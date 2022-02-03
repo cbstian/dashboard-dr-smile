@@ -21,7 +21,7 @@
             <div class="col">
                 <div class="container-sm contenedor-form px-0 px-sm-3">
                     <div class="row gx-1">
-                        <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-2 order-md-1">
+                        <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
                             <img src="{{ asset('images/limpiezaprofunda/IMG_LIMPIEZA_PROFUNDA.png') }}" class="img-fluid">
 
                             <div class="row px-5 mt-2 mt-sm-4">
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-6 text-center col-form order-1 order-md-2">
+                        <div class="col-md-12 col-lg-6 text-center col-form order-2 order-md-2">
                             <div class="card shadow">
                                 <div class="card-body py-3 py-md-4 px-3 px-md-5">
                                     <div class="text-start">
