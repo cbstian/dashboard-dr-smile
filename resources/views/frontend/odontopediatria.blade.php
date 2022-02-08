@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ mix('css/landing/landing.css') }}">
 @endsection
 
+@section('class-landing','landingazul')
+
 @section('content')
 
     <div class="container-fluid pb-5 contenedor-superior">
