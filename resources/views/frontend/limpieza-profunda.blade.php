@@ -51,6 +51,10 @@
 
                                         <div class="col-md-8 text-start">
                                             <form id="form-lp">
+                                                @csrf
+
+                                                <input type="hidden" value="{{ $campaign }}" name="campaign">
+
                                                 <div class="mb-2">
                                                     <label for="rut1" class="form-label">RUT</label>
                                                     <input type="text" class="form-control border-0" id="rut1" name="rut">
@@ -71,6 +75,8 @@
                                                     <label for="email1" class="form-label">Correo</label>
                                                     <input type="email" class="form-control border-0" id="email1" name="email">
                                                 </div>
+
+                                                <div class="alert alert-danger d-none"></div>
                                             </form>
                                         </div>
                                     </div>
@@ -111,7 +117,10 @@
 
                                         <div class="col-md-8 text-start">
                                             <div class="d-grid gap-2">
-                                                <button type="button" class="btn mt-3" id="btn-submit" data-bs-toggle="modal" data-bs-target="#modalSubmitForm">QUIERO MI PROMO</button>
+                                                <button type="button" class="btn mt-3" id="btn-submit">
+                                                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                                    QUIERO MI PROMO
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

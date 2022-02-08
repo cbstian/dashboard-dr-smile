@@ -29,7 +29,7 @@ class FormController extends Controller
         }
 
         $status = config('status-form');
-        $campaign = ['promoodonto','promoestetica'];
+        $campaign = config('campaign');
 
         return view('forms.index')
                 ->with('communes',array_unique($communes))
@@ -100,9 +100,9 @@ class FormController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name'       => 'required',
-            'lastname'   => 'required',
-            'phone'      => 'required',
+            'name'       => 'required|min:2|max:255',
+            'lastname'   => 'required|min:2|max:255',
+            'phone'      => 'required|min:2|max:255',
             'rut'        => 'required|cl_rut',
             'email'      => 'required|email|confirmed',
             'region_id'  => 'required|not_in:0',
@@ -113,9 +113,28 @@ class FormController extends Controller
         ];
 
         $messages = [
-            '*.required' => 'El :attribute es un campo requerido.',
-            '*.not_in' => 'El :attribute es un campo requerido.',
-            'rut.cl_rut' => 'El RUT no es válido',
+
+            'name.required' => 'El Nombre es un campo requerido.',
+            'name.min' => 'El Nombre es demasiado corto.',
+            'name.max' => 'El Nombre es demasiado largo.',
+            'lastname.required' => 'El Apellido es un campo requerido.',
+            'lastname.min' => 'El Apellido es demasiado corto.',
+            'lastname.max' => 'El Apellido es demasiado largo.',
+            'phone.required' => 'El Teléfono es un campo requerido.',
+            'phone.min' => 'El Teléfono es demasiado corto.',
+            'phone.max' => 'El Teléfono es demasiado largo.',
+            'rut.required' => 'El RUT es un campo requerido.',
+            'rut.cl_rut' => 'El RUT no es válido.',
+            'email.required' => 'El Email es un campo requerido.',
+            'email.email' => 'El Email no es válido.',
+            'email.confirmed' => 'Debes confirmar el Email.',
+            'region_id.required' => 'La Región es un campo requerido',
+            'region_id.not_in' => 'Región ingresada no válida',
+            'commune_id.required' => 'La Comuna es un campo requerido',
+            'commune_id.not_in' => 'Comuna ingresada no válida',
+            'campaign.required' => 'La Campaña es un campo requerido',
+            'campaign.not_in' => 'Campaña ingresada no válida',
+            'status_service.required' => 'El Estado es un campo requerido',
         ];
 
         Validator::make($request->all(), $rules, $messages)->validate();

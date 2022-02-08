@@ -38,4 +38,6 @@ Route::prefix('landing')->group(function () {
     Route::get('botox2','Landing\LandingController@botox2');
     Route::get('botox3','Landing\LandingController@botox3');
 
+    Route::post('store','Landing\LandingController@store');
+
 });

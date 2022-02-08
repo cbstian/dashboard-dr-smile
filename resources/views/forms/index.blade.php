@@ -55,8 +55,8 @@
                                 <label class="mb-1">Campaña</label>
                                 <select class="form-control form-control-sm" name="filter_campaign" id="filter_campaign">
                                     <option value="0">Todas</option>
-                                    @foreach($campaign as $cam)
-                                    <option value="{{ $cam }}">{{ $cam }}</option>
+                                    @foreach($campaign as $idCam => $cam)
+                                    <option value="{{ $idCam }}">{{ $cam }}</option>
                                     @endforeach
                                 </select>
                             </div>
