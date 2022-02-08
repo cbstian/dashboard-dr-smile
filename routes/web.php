@@ -31,5 +31,11 @@ Route::middleware(['auth','verified'])->group(function () {
 Route::prefix('landing')->group(function () {
 
     Route::get('limpiezaprofunda','Landing\LandingController@limpiezaProfunda');
+    Route::get('ortodoncia','Landing\LandingController@ortodoncia');
+    Route::get('odontopediatria','Landing\LandingController@odontopediatria');
+    Route::get('esteticadental','Landing\LandingController@esteticadental');
+    Route::get('implantologia','Landing\LandingController@implantologia');
+    Route::get('botox2','Landing\LandingController@botox2');
+    Route::get('botox3','Landing\LandingController@botox3');
 
 });

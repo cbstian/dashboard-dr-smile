@@ -22,7 +22,7 @@
         @yield('css_personalizado')
 
     </head>
-    <body data-url="{{ url('/') }}" id="limpiezaprofunda">
+    <body data-url="{{ url('/') }}" id="@yield('class-landing')">
 
         @include('frontend.layout.menu')
 
