@@ -2,6 +2,8 @@ $(function(){
 
     function submitManualEntry() {
 
+        campaing = $("input[name=campaign]").val();
+
         $.ajax({
             url     : window.location.origin+"/landing/store",
             data    : $("#form-lp").serialize(),
@@ -18,6 +20,10 @@ $(function(){
             success : function(data){
 
                 $("#modalSubmitForm").modal("show");
+
+                if (campaing == 'odontopediatria') {
+                    gtag_report_conversion();
+                }
 
             },
             complete : function(jqXHR, textStatus){
