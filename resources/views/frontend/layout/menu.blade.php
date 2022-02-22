@@ -1,7 +1,7 @@
 <div class="container-fluid bg-blue">
     <div class="py-1 py-md-3 row">
         <div class="col text-center">
-            <a href="https://drsmile.cl/">
+            <a href="https://drsmile.cl/" target="_blank">
                 <img src="{{ asset('images/limpiezaprofunda/logo-dr-smile.png') }}" class="img-fluid">
             </a>
         </div>
