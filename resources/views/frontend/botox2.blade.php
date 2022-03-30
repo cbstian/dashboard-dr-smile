@@ -62,7 +62,6 @@
                                                 @csrf
 
                                                 <input type="hidden" value="{{ $campaign }}" name="campaign">
-                                                <input type="hidden" value="{{ $campaign }}" name="campaign">
 
                                                 <div class="mb-2">
                                                     <label for="rut1" class="form-label">RUT</label>
