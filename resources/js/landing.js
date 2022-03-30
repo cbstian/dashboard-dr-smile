@@ -21,7 +21,7 @@ $(function(){
 
                 $("#modalSubmitForm").modal("show");
 
-                if (campaing == 'odontopediatria' || campaing == 'implantologia') {
+                if (campaing == 'odontopediatria' || campaing == 'implantologia' || campaing == 'botox2') {
                     gtag_report_conversion();
                 }
 

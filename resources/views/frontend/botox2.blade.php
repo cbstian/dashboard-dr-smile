@@ -5,6 +5,14 @@
 
 @section('css_personalizado')
     <link rel="stylesheet" href="{{ mix('css/landing/landing.css') }}">
+
+    <script>
+        function gtag_report_conversion() {
+            console.log("gtag_report_conversion");
+            gtag('event', 'conversion', {'send_to': 'AW-366499281/EFEVCMmyo64DENGr4a4B'});
+            return false;
+        }
+    </script>
 @endsection
 
 @section('class-landing','landingrosado')
@@ -53,6 +61,7 @@
                                             <form id="form-lp">
                                                 @csrf
 
+                                                <input type="hidden" value="{{ $campaign }}" name="campaign">
                                                 <input type="hidden" value="{{ $campaign }}" name="campaign">
 
                                                 <div class="mb-2">
