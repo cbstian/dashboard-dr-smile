@@ -32,7 +32,7 @@
                 <div class="container-sm contenedor-form px-0 px-sm-3">
                     <div class="row gx-1">
                         <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
-                            <img src="{{ asset('images/botox2/botox2.png') }}" class="img-fluid">
+                            <img src="{{ asset('images/botox2/esteticafacial.jpg') }}" class="img-fluid shadow" style="border-radius: 30px; max-width: 530px; margin-top:30px;">
 
                             <div class="row px-5 mt-2 mt-sm-4">
                                 <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
@@ -48,7 +48,7 @@
                                 <div class="card-body py-3 py-md-4 px-3 px-md-5">
                                     <div class="text-start">
                                         <img src="{{ asset('images/botox2/promosmile_estetica.svg') }}" class="img-fluid" style="max-width: 100px;">
-                                        <h1 style="font-weight: 900;">BOTOX 2 ZONAS</h1>
+                                        <h1 style="font-weight: 900; text-transform: uppercase;">Revitaliza la piel de tu rostro con la mejor tecnología disponible para ti</h1>
                                         <p class="fw-bold">Estética Facial</p>
                                         <hr>
                                     </div>
