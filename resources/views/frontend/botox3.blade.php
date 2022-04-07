@@ -40,7 +40,7 @@
                                 <div class="card-body py-3 py-md-4 px-3 px-md-5">
                                     <div class="text-start">
                                         <img src="{{ asset('images/botox2/promosmile_estetica.svg') }}" class="img-fluid" style="max-width: 100px;">
-                                        <h1 style="font-weight: 900;">BOTOX 3 ZONAS</h1>
+                                        <h1 style="font-weight: 900; text-transform: uppercase;">Rejuvenecimiento de la piel 3 ZONAS</h1>
                                         <p class="fw-bold">Estética Facial</p>
                                         <hr>
                                     </div>
