@@ -20,11 +20,6 @@ mix.scripts(['resources/js/app.js'], 'public/js/app.js')
     .scripts([
         'node_modules/daterangepicker/moment.min.js',
         'node_modules/daterangepicker/daterangepicker.js'
-    ], 'public/js/core.js')
-
-    .scripts([
-        'node_modules/daterangepicker/moment.min.js',
-        'node_modules/daterangepicker/daterangepicker.js'
     ], 'public/js/daterangepicker.js')
 
     /** SELECT2 */
