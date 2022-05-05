@@ -7,9 +7,12 @@ $landingDiaMadre = function(){
     Route::post('descargarGiftcard','Landing\LandingController@descargarGiftcard')->name('descargarGiftcard');
 };
 
-Route::domain('diadelamadre.drsmile.cl')->group($landingDiaMadre);
-Route::domain('diadelamama.drsmile.cl')->group($landingDiaMadre);
-Route::domain('mama.dev.drsmile.local')->group($landingDiaMadre);
+if (config('app.env') == 'production') {
+    Route::domain('diadelamadre.drsmile.cl')->group($landingDiaMadre);
+    Route::domain('diadelamama.drsmile.cl')->group($landingDiaMadre);
+} else {
+    Route::domain('mama.dev.drsmile.local')->group($landingDiaMadre);
+}
 
 Auth::routes(['register' => false]);
 Route::redirect('/', '/login');
