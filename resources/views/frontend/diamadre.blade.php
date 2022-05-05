@@ -22,20 +22,34 @@
 
         <style>
             .banner-home {
-                background-image: url('{{ asset("images/diamadre2022/BG_PROMO_MAMA_1080_1920.jpg") }}');
+                background-image: url('{{ asset("images/diamadre2022/BG_PROMO_MAMA_1080_1920_2.jpg") }}');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
                 height: 85vh;
             }
 
-            @media (max-width: 500px) {
+            .fs1 {
+                font-size: 30px;
+            }
+            .fs2 {
+                font-size: 28px;
+            }
+
+            @media (max-width: 650px) {
                 .banner-home {
-                    background-image: url('{{ asset("images/diamadre2022/BG_PROMO_MAMA_SMARTPHONE.jpg") }}');
+                    background-image: url('{{ asset("images/diamadre2022/BG_PROMO_MAMA_SMARTPHONE_2.jpg") }}');
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
                     height: 100vh;
+                }
+
+                .fs1 {
+                    font-size: 20px;
+                }
+                .fs2 {
+                    font-size: 18px;
                 }
             }
 
@@ -59,13 +73,19 @@
 
         <div class="container-fluid banner-home">
             <div class="row justify-content-end" style="height: 100%;">
-                <div class="col-xxl-4 col-md-6 pt-5 text-center px-md-5 px-2" style="height: 100%;">
-                    <img src="{{ asset('images/diamadre2022/TITULO_MAMADRSMILE_.svg') }}" class="img-fluid mt-5 mb-5" style="max-width: 450px;">
+                <div class="col-xxl-4 col-md-6 pt-2 pt-md-5 text-center px-md-5 px-2" style="height: 100%;">
+                    <img src="{{ asset('images/diamadre2022/TITULO_MAMADRSMILE_.svg') }}" class="img-fluid mt-2 mt-md-5 mb-5" style="max-width: 450px;">
                     <img src="{{ asset('images/diamadre2022/ICON_GIFTCARDDRSMILE_.svg') }}" class="img-fluid mb-3" style="max-width: 300px;">
-                    <div class="px-2" style="background-color: #EC9D9F; color: #fff; font-size: 30px; font-weight: 900; min-width:200px; border-radius: 30px;">En tratamientos sobre $200.000</div>
-                    <p style="color:#EC9D9F; font-size: 28px; font-weight: 900; margin-top:10px; margin-bottom:0px;">DURANTE TODO EL MES DE MAYO</p>
+                    <div class="px-2 fs1" style="background-color: #EC9D9F; color: #fff; font-weight: 900; min-width:200px; border-radius: 30px;">En tratamientos sobre $200.000</div>
+                    <p class="fs2" style="color:#EC9D9F; font-weight: 900; margin-top:10px; margin-bottom:0px;">DURANTE TODO EL MES DE MAYO</p>
                     <p style="color:#fff; font-size: 20px; font-weight: 700;">Valida entre el 04/05/2022 hasta 31/05/2022</p>
-                    <div class="card p-3 p-md-5 text-start" style="border:0px; border-radius: 15px;">
+
+                    <form method="POST" action="{{ route('descargarGiftcard') }}" class="d-block d-md-none mt-5">
+                        @csrf
+                        <button class="btn" type="submit" style="background-color:#EC9D9F; border-radius:20px; color:#fff; font-weight: 800; font-size: 20px;">DESCARGAR MI GIFTCARD</button>
+                    </form>
+
+                    <div class="card p-3 p-md-5 text-start d-none d-md-block" style="border:0px; border-radius: 15px;">
                         <div style="background-color:#F4D7CF; color:#fff; font-size: 11px; width:100px; text-align:center; border-radius:15px; padding-top:3px; font-weight: 800;">PROMOSMILE</div>
                         <h1 style="color:#F4D7CF; font-weight: 900; font-size:30px; margin-bottom:5px;">QUIERO MI GIFTCARD</h1>
                         <p style="color:#D9A6E8; font-size:18px; font-weight:800; line-height: 20px; margin-bottom:5px;">
@@ -119,7 +139,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12 mt-5 text-center">
-                    <h1 style="color:#D9A6E8; font-size:30px; font-weight:800; line-height: 20px; margin-bottom:15px;">
+                    <h1 style="color:#D9A6E8; font-size:30px; font-weight:800; line-height: 27px; margin-bottom:15px;">
                         SUGERENCIA: AGENDAR HORA DENTRO DEL MES DE MAYO
                     </h1>
                     <hr>
@@ -157,7 +177,9 @@
             </div>
         </div>
 
-        @include('frontend.layout.footer')
+        <div class="container-fluid mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927.4255610168193!2d-70.57110572056673!3d-33.45143914701169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce4bac33e3c3%3A0xb2dce2ff006b4e46!2sAv.%20Ossa%20235%2C%20La%20Reina%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1651727178959!5m2!1ses-419!2scl" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
         <script src="{{ mix('js/landing/core.js') }}"></script>
     </body>
