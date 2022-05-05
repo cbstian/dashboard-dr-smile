@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "appstract/laravel-options": "^5.3",
         "freshbitsweb/laratables": "^2.4",
         "freshwork/chilean-bundle": "^2.1",
         "fruitcake/laravel-cors": "^2.0",

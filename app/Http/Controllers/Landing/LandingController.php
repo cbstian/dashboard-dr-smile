@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Form;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class LandingController extends Controller
 {
@@ -113,5 +114,19 @@ class LandingController extends Controller
         $form->save();
 
         return json_encode(['ok']);
+    }
+
+    public function diaDeLaMadre()
+    {
+        return view('frontend.diamadre');
+    }
+
+    public function descargarGiftcard()
+    {
+        $countDownload = option('countGiftcardDiaMadre',0);
+
+        option(['countGiftcardDiaMadre' => $countDownload + 1]);
+
+        return Storage::disk('landing')->download('GIFTCARD_drsmile.pdf');
     }
 }

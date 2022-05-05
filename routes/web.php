@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
+$landingDiaMadre = function(){
+    Route::get('/','Landing\LandingController@diaDeLaMadre');
+    Route::post('descargarGiftcard','Landing\LandingController@descargarGiftcard')->name('descargarGiftcard');
+};
+
+Route::domain('diadelamadre.drsmile.cl')->group($landingDiaMadre);
+Route::domain('diadelamama.drsmile.cl')->group($landingDiaMadre);
+Route::domain('mama.dev.drsmile.local')->group($landingDiaMadre);
+
 Auth::routes(['register' => false]);
 Route::redirect('/', '/login');
 
