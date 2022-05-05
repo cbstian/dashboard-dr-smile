@@ -96,7 +96,66 @@
             </div>
         </div>
 
-
+        <div class="container">
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-6 mt-5">
+                    <img src="{{ asset('images/diamadre2022/GIFTCARD_REGALODRSMILE_.svg') }}" class="img-fluid">
+                </div>
+            </div>
+            <div class="row justify-content-center pt-4">
+                <div class="col-md-6 text-center">
+                    <h1 style="color:#D9A6E8; font-size:30px; font-weight:800; line-height: 20px; margin-bottom:15px;">
+                        MAMÁ, TU GIFT CARD
+                    </h1>
+                    <p style="color:#D9A6E8; font-size:20px; font-weight:700; line-height: 20px; margin-bottom:25px;">
+                        VÁLIDA PARA SERVICIOS REALIZADOS<br>
+                        CON VALOR SOBRE $200.000
+                    </p>
+                    <form method="POST" action="{{ route('descargarGiftcard') }}">
+                        @csrf
+                        <button class="btn" type="submit" style="background-color:#d9a6e8; border-radius:10px; color:#fff; font-weight: 800;">DESCARGAR MI GIFTCARD</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 mt-5 text-center">
+                    <h1 style="color:#D9A6E8; font-size:30px; font-weight:800; line-height: 20px; margin-bottom:15px;">
+                        SUGERENCIA: AGENDAR HORA DENTRO DEL MES DE MAYO
+                    </h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p style="color: #606060; font-size: 22px;"><b>¿Cómo Funciona?</b></p>
+                    <p style="color:#D9A6E8; font-size:20px; font-weight:700; line-height: 20px; margin-bottom:25px;">
+                        <img src="{{ asset('images/diamadre2022/ICON_COMOFUNCIONADRSMILE_.svg') }}" style="width: 40px;"> Muéstrala desde tu celular.
+                    </p>
+                    <p style="color: #606060; font-size: 18px;">
+                        Imprime esta Gift Card/Cupón o muéstrala
+                        desde tu celular y preséntala en caja al momento
+                        de realizar tu compra.
+                    </p>
+                    <p style="color: #606060; font-size: 18px;">
+                        Esta Gift Card es al portador, sin embargo por
+                        seguridad, al momento de realizar la compra,
+                        le será solicitada su Cédula de Identidad en caja
+                        y sus datos.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: #606060; font-size: 22px;"><b>¿Dónde Canjear?</b></p>
+                    <p style="color:#D9A6E8; font-size:20px; font-weight:700; line-height: 20px; margin-bottom:25px;">
+                        <img src="{{ asset('images/diamadre2022/ICON_DONDECANJEARDRSMILE_.svg') }}" style="width: 30px;"> Av. Ossa 235, La Reina.
+                    </p>
+                    <p style="color: #606060; font-size: 18px;">
+                        Úsala en nuestra clínica odontológica y estética
+                        facial, ubicado en Av. Ossa 235, La Reina. A
+                        pasos del metro Plaza Egaña.
+                    </p>
+                </div>
+            </div>
+        </div>
 
         @include('frontend.layout.footer')
 
