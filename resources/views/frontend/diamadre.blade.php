@@ -107,7 +107,7 @@
                         <div class="text-center py-2 mt-2" style="border-radius: 10px; border: 1px solid grey;">
                             <small>
                                 Recuerda, tu primera evaluación es completamente grátis.<br>
-                                Quiero mi primera evaluación
+                                <a href="https://drsmile.cl/promosmile/" target="_blank">Quiero mi primera evaluación</a>
                             </small>
                         </div>
                     </div>
