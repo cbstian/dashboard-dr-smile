@@ -36,7 +36,7 @@ class UserAdmin extends Seeder
 
         }
 
-        if ( !User::where('email','falvear@nazcastudios.cl ')->first() ) {
+        if ( !User::where('email','falvear@nazcastudios.cl')->first() ) {
 
             $user = new User();
             $user->name = 'Francisco Alvear';
