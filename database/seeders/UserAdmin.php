@@ -35,5 +35,16 @@ class UserAdmin extends Seeder
             $user->save();
 
         }
+
+        if ( !User::where('email','falvear@nazcastudios.cl ')->first() ) {
+
+            $user = new User();
+            $user->name = 'Francisco Alvear';
+            $user->email = 'falvear@nazcastudios.cl';
+            $user->password = bcrypt('jkkxav9q');
+            $user->email_verified_at = now();
+            $user->save();
+
+        }
     }
 }
