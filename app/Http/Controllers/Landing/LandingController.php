@@ -118,6 +118,7 @@ class LandingController extends Controller
 
     public function diaDeLaMadre()
     {
+        abort(404);
         return view('frontend.diamadre');
     }
 
@@ -137,6 +138,8 @@ class LandingController extends Controller
 
     public function descargarGiftcard()
     {
+        abort(404);
+
         $countDownload = option('countGiftcardDiaMadre',0);
 
         option(['countGiftcardDiaMadre' => $countDownload + 1]);
