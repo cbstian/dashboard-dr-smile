@@ -7,11 +7,20 @@ $landingDiaMadre = function(){
     Route::post('descargarGiftcard','Landing\LandingController@descargarGiftcard')->name('descargarGiftcard');
 };
 
+$landingDiaPadre = function(){
+    Route::get('/','Landing\LandingController@diaDelPadre');
+    Route::post('descargarGiftcardPadre','Landing\LandingController@descargarGiftcardPadre')->name('descargarGiftcardPadre');
+};
+
 if (config('app.env') == 'production') {
     Route::domain('diadelamadre.drsmile.cl')->group($landingDiaMadre);
     Route::domain('diadelamama.drsmile.cl')->group($landingDiaMadre);
+
+    Route::domain('diadelpadre.drsmile.cl')->group($landingDiaPadre);
+    Route::domain('diadelpapa.drsmile.cl')->group($landingDiaPadre);
 } else {
     Route::domain('mama.dev.drsmile.local')->group($landingDiaMadre);
+    Route::domain('papa.dev.drsmile.local')->group($landingDiaPadre);
 }
 
 Auth::routes(['register' => false]);

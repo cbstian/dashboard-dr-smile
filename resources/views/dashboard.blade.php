@@ -46,9 +46,10 @@
             <div class="info-box mb-3">
                 <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-file-download"></i></span>
                 <div class="info-box-content">
-                   <span class="info-box-text">Total descarga Giftcard</span>
+                   <span class="info-box-text">Total Giftcard Madre / Padre </span>
                     <span class="info-box-number">
-                        {{ option('countGiftcardDiaMadre',0) }}
+                        {{ option('countGiftcardDiaMadre',0) }} /
+                        {{ option('countGiftcardDiaPadre',0) }}
                     </span>
                 </div>
             </div>

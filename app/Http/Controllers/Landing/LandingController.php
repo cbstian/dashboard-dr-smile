@@ -121,6 +121,20 @@ class LandingController extends Controller
         return view('frontend.diamadre');
     }
 
+    public function diaDelPadre()
+    {
+        return view('frontend.diapadre');
+    }
+
+    public function descargarGiftcardPadre()
+    {
+        $countDownload = option('countGiftcardDiaPadre',0);
+
+        option(['countGiftcardDiaPadre' => $countDownload + 1]);
+
+        return Storage::disk('landing')->download('gifcard_diadelpadre.pdf');
+    }
+
     public function descargarGiftcard()
     {
         $countDownload = option('countGiftcardDiaMadre',0);
