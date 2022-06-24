@@ -28,10 +28,10 @@
 
                             <div class="row px-5 mt-2 mt-sm-4">
                                 <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/limpiezaprofunda/ICON_CLINIC.svg') }}" class="img-fluid">
+                                    <img src="{{ asset('images/icon_location_b.svg') }}" class="img-fluid">
                                 </div>
                                 <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/limpiezaprofunda/ICON_PAY.svg') }}" class="img-fluid">
+                                    <img src="{{ asset('images/icon_loction_r.svg') }}" class="img-fluid">
                                 </div>
                             </div>
                         </div>
