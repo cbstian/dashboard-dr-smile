@@ -46,5 +46,16 @@ class UserAdmin extends Seeder
             $user->save();
 
         }
+
+        if ( !User::where('email','adelacuesta@drsmile.cl')->first() ) {
+
+            $user = new User();
+            $user->name = 'admin 2';
+            $user->email = 'adelacuesta@drsmile.cl';
+            $user->password = bcrypt('G434CLxQk0XPBRWfwdosm1WQ');
+            $user->email_verified_at = now();
+            $user->save();
+
+        }
     }
 }

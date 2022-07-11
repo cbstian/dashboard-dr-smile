@@ -164,7 +164,7 @@ var moduloForm = function(){
                     ],
                     "firstDay": 1
                 },
-                "startDate": moment().subtract(10, 'days').format("YYYY-MM-DD"),
+                "startDate": moment().subtract(90, 'days').format("YYYY-MM-DD"),
                 "endDate": moment().add(10, 'days').format("YYYY-MM-DD")
             });
 
