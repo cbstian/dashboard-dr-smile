@@ -25,19 +25,11 @@
                     <div class="row gx-1">
                         <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
                             <img src="{{ asset('images/limpiezaprofunda/IMG_LIMPIEZA_PROFUNDA.png') }}" class="img-fluid">
-
-                            <div class="row px-5 mt-2 mt-sm-4">
-                                <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/icon_location_b.svg') }}" class="img-fluid">
-                                </div>
-                                <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/limpiezaprofunda/ICON_PAY.svg') }}" class="img-fluid">
-                                </div>
-                            </div>
+                            @include('frontend.components.location-payment')
                         </div>
                         <div class="col-md-12 col-lg-6 text-center col-form order-2 order-md-2">
                             <div class="card shadow">
-                                <div class="card-body py-3 py-md-4 px-3 px-md-5">
+                                <div class="card-body py-3 py-md-4 px-3 px-md-4">
                                     <div class="text-start">
                                         <img src="{{ asset('images/limpiezaprofunda/PROMOSMILE_1.svg') }}" class="img-fluid" style="max-width: 100px;">
                                         <h1 style="font-weight: 900;">LIMPIEZA PROFUNDA</h1>
@@ -111,7 +103,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 text-start">
-                                            <h1  class="mb-0" style="font-weight: 800;"><span style="color:#D9A6E8; font-size:25px;">$</span>39.900</h1>
+                                            <h1  class="mb-0" style="font-weight: 800; font-size: 35px;"><span style="color:#D9A6E8; font-size:25px;">$</span>39.900</h1>
                                             <p style="color:#B2B2B2; font-weight: 800; font-size: 19px;">ANTES: $82.000</p>
                                         </div>
 

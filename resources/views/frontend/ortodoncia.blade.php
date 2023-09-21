@@ -25,19 +25,11 @@
                     <div class="row gx-1">
                         <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
                             <img src="{{ asset('images/ortodoncia/ortodoncia.png') }}" class="img-fluid">
-
-                            <div class="row px-5 mt-2 mt-sm-4">
-                                <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/icon_location_b.svg') }}" class="img-fluid">
-                                </div>
-                                <div class="col-md-6 px-0 px-sm-4 text-center mb-4">
-                                    <img src="{{ asset('images/limpiezaprofunda/ICON_PAY.svg') }}" class="img-fluid">
-                                </div>
-                            </div>
+                            @include('frontend.components.location-payment')
                         </div>
                         <div class="col-md-12 col-lg-6 text-center col-form order-2 order-md-2">
                             <div class="card shadow">
-                                <div class="card-body py-3 py-md-4 px-3 px-md-5">
+                                <div class="card-body py-3 py-md-4 px-3 px-md-4">
                                     <div class="text-start">
                                         <img src="{{ asset('images/limpiezaprofunda/PROMOSMILE_1.svg') }}" class="img-fluid" style="max-width: 100px;">
                                         <h1 style="font-weight: 900;">TU SONRISA PERFECTA</h1>
