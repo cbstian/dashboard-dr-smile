@@ -8,9 +8,11 @@
 
     <script>
         function gtag_report_conversion() {
-            console.log("gtag_report_conversion");
-            gtag('event', 'conversion', {'send_to': 'AW-366499281/EFEVCMmyo64DENGr4a4B'});
-            return false;
+            dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'formSent',
+                'type': 'botox2',
+            });
         }
     </script>
 @endsection

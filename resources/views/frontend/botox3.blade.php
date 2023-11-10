@@ -5,6 +5,16 @@
 
 @section('css_personalizado')
     <link rel="stylesheet" href="{{ mix('css/landing/landing.css') }}">
+
+    <script>
+        function gtag_report_conversion() {
+            dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'formSent',
+                'type': 'botox3',
+            });
+        }
+    </script>
 @endsection
 
 @section('class-landing','landingrosado')

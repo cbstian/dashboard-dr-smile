@@ -21,10 +21,11 @@ $(function(){
 
                 $("#modalSubmitForm").modal("show");
 
-                if (campaing == 'odontopediatria' || campaing == 'implantologia' || campaing == 'botox2') {
-                    gtag_report_conversion();
-                }
-
+                dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'formSent',
+                    'type': 'implantologia',
+                });
             },
             complete : function(jqXHR, textStatus){
 
