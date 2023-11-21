@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Landing;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Form;
 use Illuminate\Support\Str;
@@ -115,6 +116,18 @@ class LandingController extends Controller
         $form->campaign = $request->input('campaign',null);
         $form->sucursal = $request->input('sucursal',null);
         $form->save();
+
+        //Se guardó, disparamos a Zapier
+        Http::post('https://hooks.zapier.com/hooks/catch/735686/3kszxmm/', [
+            'name' => $form->name,
+            'lastname' => $form->lastname,
+            'phone' => $form->phone,
+            'rut' => $form->rut,
+            'email' => $form->email,
+            'campaign' => $form->campaign,
+            'sucursal' => $form->sucursal,
+            'created_at' => $form->created_at,
+        ]);
 
         return json_encode(['ok']);
     }
