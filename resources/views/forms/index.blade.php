@@ -114,6 +114,7 @@
                                     <th>Comuna</th>
                                     <th>Comentario</th>
                                     <th>Campaña</th>
+                                    <th>Sucursal</th>
                                     <th>Recibido</th>
                                     <th>Estado</th>
                                 </tr>

@@ -67,6 +67,14 @@
                                                     <label for="email1" class="form-label">Correo</label>
                                                     <input type="email" class="form-control border-0" id="email1" name="email">
                                                 </div>
+                                                <div class="mb-2">
+                                                    <label for="sucursal" class="form-label">Sucursal</label>
+                                                    <select id="sucursal" name="sucursal" class="form-control form-control-sm border-0">
+                                                        <option value="">Seleccione</option>
+                                                        <option value="Las Condes">Encomenderos #138, Las Condes</option>
+                                                        <option value="La Reina">Av Ossa #235, La Reina</option>
+                                                    </select>
+                                                </div>
 
                                                 <div class="alert alert-danger d-none"></div>
                                             </form>

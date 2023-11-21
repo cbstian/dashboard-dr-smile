@@ -97,6 +97,7 @@ var moduloForm = function(){
                     { name: 'commune_id'},
                     { name: 'details'},
                     { name: 'campaign'},
+                    {name: 'sucursal'},
                     { name: 'created_at'},
                     { name: 'estado', orderable: false, searchable: false}
                 ],

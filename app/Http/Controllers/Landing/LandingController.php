@@ -76,6 +76,7 @@ class LandingController extends Controller
             'rut'      => 'required|cl_rut',
             'email'    => 'required|email',
             'campaign' => 'required|not_in:0',
+            'sucursal' => 'required'
         ];
 
         $messages = [
@@ -92,6 +93,7 @@ class LandingController extends Controller
             'rut.cl_rut' => 'El RUT no es válido.',
             'email.required' => 'El Email es un campo requerido.',
             'email.email' => 'El Email no es válido.',
+            'sucursal.required' => 'Debes seleccionar sucursal.',
         ];
 
         Validator::make($request->all(), $rules, $messages)->validate();
@@ -111,6 +113,7 @@ class LandingController extends Controller
         $form->rut = $request->input('rut',null);
         $form->email = $request->input('email',null);
         $form->campaign = $request->input('campaign',null);
+        $form->sucursal = $request->input('sucursal',null);
         $form->save();
 
         return json_encode(['ok']);
