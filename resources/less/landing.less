@@ -61,9 +61,7 @@ body{
                     margin-left: 0px;
                     float: none;
                 }
-
             }
-
         }
     }
 
@@ -112,7 +110,7 @@ body{
                 }
 
                 #btn-submit {
-                    background-color: #89B2EF;
+                    background-color: #eb0981;
                     border-radius: 10px;
                     color: #fff;
                 }
@@ -240,7 +238,7 @@ body{
                 }
 
                 #btn-submit {
-                    background-color: #D9A6E8;
+                    background-color: #eb0981;
                     border-radius: 10px;
                     color: #fff;
                 }
@@ -259,4 +257,29 @@ body{
 
     }
 
+}
+
+.landing-aside {
+    .card {
+        border-radius: 20px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.landing-aside--blue {
+    .card {
+        color: #89B2EF;
+    }
+}
+
+.landing-aside--pink {
+    .card {
+        color: #D9A6E8;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .landing-form-wrapper {
+        flex-direction: column-reverse;
+    }
 }

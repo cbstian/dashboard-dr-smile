@@ -22,7 +22,7 @@
         <div class="row py-5">
             <div class="col">
                 <div class="container-sm contenedor-form px-0 px-sm-3">
-                    <div class="row gx-1">
+                    <div class="row gx-1 landing-form-wrapper">
                         <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
                             <img src="{{ asset('images/limpiezaprofunda/IMG_LIMPIEZA_PROFUNDA.png') }}" class="img-fluid">
                             @include('frontend.components.location-payment')
@@ -77,30 +77,6 @@
                                                 </div>
 
                                                 <div class="alert alert-danger d-none"></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <hr class="my-3">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 text-start">
-                                            <p class="fw-bold">INCLUYE</p>
-                                        </div>
-
-                                        <div class="col-md-8 text-start">
-                                            <form>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Diagnóstico">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Radiografías">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Destartraje y limpieza">
-                                                </div>
                                             </form>
                                         </div>
                                     </div>
