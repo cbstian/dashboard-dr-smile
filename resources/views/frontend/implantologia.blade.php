@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 text-start">
-                                            <h1  class="mb-0" style="font-weight: 800; font-size: 35px;"><span style="color:#D9A6E8; font-size:25px;">$</span>550.000</h1>
+                                            <h1  class="mb-0" style="font-weight: 800; font-size: 35px;"><span style="color:#D9A6E8; font-size:25px;">$</span>599.950</h1>
                                             <p style="color:#B2B2B2; font-weight: 800; font-size: 19px;">ANTES: $812.500</p>
                                         </div>
 
