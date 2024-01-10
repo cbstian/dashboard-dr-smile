@@ -15,7 +15,7 @@
                 <img src="{{ asset('images/limpiezaprofunda/phone-icon.jpg') }}" class="">
                 <div>
                     <a href="tel:+56264656924">+56 2 6465 6924</a>
-                    <a href="tel:+56264656922">+56 2 6465 6922</a>
+                    <a href="tel:+6006560210">+600 656 0210</a>
                 </div>
             </div>
         </div>
