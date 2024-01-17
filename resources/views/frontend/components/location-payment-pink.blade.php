@@ -2,10 +2,10 @@
 <div class="row landing-aside landing-aside--pink mt-4 px-lg-5">
     <div class="card shadow">
         <div class="card-body text-start">
-            <p class="small">¡Resalta tu belleza con la aplicación de Botox en Dr. Smile!</p>
-            <p class="small">La aplicación de Botox en hasta 3 zonas es un procedimiento no estándar diseñado para resaltar tu belleza de manera personalizada.</p>
-            <p class="small">Nuestro equipo de expertos en estética facial te brindará una experiencia única, asegurándose de comprender tus metas y expectativas.</p>
-            <p class="small">¡Agenda tu cita con nosotros y siente la confianza que mereces!</p>
+            <p class="small">¡Potencia tu belleza con nuestros tratamientos de estética facial en Dr. Smile!</p>
+            <p class="small">La estética facial, centrada en resaltar tu belleza de manera personalizada, incluye procedimientos no estándar en hasta 3 zonas.</p>
+            <p class="small">Nuestro equipo de expertos está aquí para ofrecerte una experiencia única, comprendiendo a fondo tus metas y expectativas.</p>
+            <p class="small">¡Agenda tu cita con nosotros y descubre la confianza que mereces!</p>
         </div>
     </div>
 </div>
