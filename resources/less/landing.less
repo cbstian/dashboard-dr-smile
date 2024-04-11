@@ -284,3 +284,21 @@ body{
         flex-direction: column-reverse;
     }
 }
+
+.ortodoncia__banner--mobile{
+        display: block;
+        object-fit: cover;
+        margin: auto;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.ortodoncia__banner--desk{
+        display: none;
+    @media (min-width: 768px) {
+        display: block;
+        object-fit: cover;
+        margin: auto;
+    }
+}
