@@ -37,7 +37,7 @@
     <div class="card shadow">
         <div class="card-body text-start">
             <p class="small">¿Por qué conformarse con menos cuando puedes elegir lo mejor para tu sonrisa?</p>
-            <p class="small">Incluye <br>-Diagnóstico <br>-Estudio de ortodoncia digital <br>-Limpieza -Blanqueamiento <br>-Y cuenta con 20% para los demás tratamientos</p>
+            <p class="small">Incluye <br>-Diagnóstico <br>-Estudio de ortodoncia digital <br>-Limpieza <br>-Blanqueamiento <br>-Y cuenta con 20% para los demás tratamientos</p>
             <p class="small">Agenda tu cita y descubre cómo podemos transformar tu sonrisa de manera efectiva y estilizada.</p>
         </div>
     </div>
