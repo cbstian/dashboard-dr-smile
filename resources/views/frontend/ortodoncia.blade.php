@@ -19,14 +19,14 @@
         </div>
     </div>
 
-    <div class="container-fluid pb-5 contenedor-superior">
+   <!--  <div class="container-fluid pb-5 contenedor-superior">
         <div class="row pb-5">
             <div class="col text-center p-0 pb-5">
                 <img src="{{ asset('images/ortodoncia/ortodoncia-mobile.jpg') }}" class="img-fluid ortodoncia__banner--mobile">
                 <img src="{{ asset('images/ortodoncia/ortodoncia-desk.jpg') }}" class="img-fluid ortodoncia__banner--desk">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container-fluid pb-5 contenedor-inferior">
         <div class="row py-5">
