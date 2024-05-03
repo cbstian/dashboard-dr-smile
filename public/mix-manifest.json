@@ -1,8 +1,8 @@
 {
-    "/css/landing/landing.css": "/css/landing/landing.css?id=4db8a86f1217800f9ff3",
+    "/css/landing/landing.css": "/css/landing/landing.css?id=722c810d8ad2c3d60f5b",
     "/js/app.js": "/js/app.js?id=d41d8cd98f00b204e980",
-    "/js/form.js": "/js/form.js?id=8bfdf66ccccf3a724784",
-    "/js/dashboard.js": "/js/dashboard.js?id=2d39e771451dd58a6b2c",
+    "/js/form.js": "/js/form.js?id=625b0e80d35fffc13446",
+    "/js/dashboard.js": "/js/dashboard.js?id=be1b00bcfa5d8ab782d1",
     "/css/daterangepicker.css": "/css/daterangepicker.css?id=55e1d560821b4a4b141b",
     "/css/bootstrap-datepicker3.css": "/css/bootstrap-datepicker3.css?id=dffa79e5aff4e6885eaf",
     "/js/bootstrap-datepicker3.js": "/js/bootstrap-datepicker3.js?id=33faca6ece9aa68d881b",
@@ -26,5 +26,5 @@
     "/webfonts/fa-solid-900.ttf": "/webfonts/fa-solid-900.ttf?id=d44877cb1fa07af67d56",
     "/webfonts/fa-solid-900.woff": "/webfonts/fa-solid-900.woff?id=26f963f67e793d91cc76",
     "/webfonts/fa-solid-900.woff2": "/webfonts/fa-solid-900.woff2?id=184257670d2e18e37fc9",
-    "/js/landing/landing.js": "/js/landing/landing.js?id=c807aa11ead9af1b4914"
+    "/js/landing/landing.js": "/js/landing/landing.js?id=fc8a91181227990eb358"
 }
