@@ -109,9 +109,6 @@
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Radiografías">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Blanqueamiento LED">
-                                                </div>
-                                                <div class="mb-3">
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Destartraje y limpieza">
                                                 </div>
                                             </form>
