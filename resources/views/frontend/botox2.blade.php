@@ -106,15 +106,6 @@
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Incluye Botox 2 zonas">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Frente, Entrecejos">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Líneas alrededor de los ojos">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Arrugas nasales o Mentón">
-                                                </div>
-                                                <div class="mb-3">
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Evaluación y diagnóstico">
                                                 </div>
                                                 <div class="mb-3">
