@@ -103,7 +103,7 @@
                                         <div class="col-md-8 text-start">
                                             <form>
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Botox 3 zonas">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Botox 3 zonas del rostro a elección">
                                                 </div>
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Frente, Entrecejos">
