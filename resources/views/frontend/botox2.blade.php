@@ -42,7 +42,7 @@
                                 <div class="card-body py-3 py-md-4 px-3 px-md-4">
                                     <div class="text-start">
                                         <img src="{{ asset('images/botox2/promosmile_estetica.svg') }}" class="img-fluid" style="max-width: 100px;">
-                                        <h1 style="font-weight: 900; text-transform: uppercase;">Revitaliza la piel de tu rostro con la mejor tecnología disponible para ti</h1>
+                                        <h1 style="font-weight: 900; text-transform: uppercase;">REJUVENECIMIENTO DE LA PIEL 2 ZONAS</h1>
                                         <p class="fw-bold">Estética Facial</p>
                                         <hr>
                                     </div>
@@ -87,6 +87,45 @@
                                                 </div>
 
                                                 <div class="alert alert-danger d-none"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <hr class="my-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 text-start">
+                                            <p class="fw-bold">INCLUYE</p>
+                                        </div>
+
+                                        <div class="col-md-8 text-start">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Incluye Botox 2 zonas">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Frente, Entrecejos">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Líneas alrededor de los ojos">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Arrugas nasales o Mentón">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Evaluación y diagnóstico">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Aplicación">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Control en 2 semanas con retoque si es necesario">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="*El procedimiento no necesita de Pabellón.">
+                                                </div>
                                             </form>
                                         </div>
                                     </div>

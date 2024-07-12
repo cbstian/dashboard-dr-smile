@@ -103,13 +103,28 @@
                                         <div class="col-md-8 text-start">
                                             <form>
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Diagnóstico">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control border-0 servicios" readonly value="Radiografías">
-                                                </div>
-                                                <div class="mb-3">
                                                     <input type="text" class="form-control border-0 servicios" readonly value="Botox 3 zonas">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Frente, Entrecejos">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Líneas alrededor de los ojos">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Arrugas nasales o Mentón">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Evaluación y diagnóstico">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Aplicación">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Control en 2 semanas con retoque si es necesario">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="*El procedimiento no necesita de Pabellón.">
                                                 </div>
                                             </form>
                                         </div>
