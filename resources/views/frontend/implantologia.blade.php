@@ -24,7 +24,7 @@
                 <div class="container-sm contenedor-form px-0 px-sm-3">
                     <div class="row gx-1 landing-form-wrapper">
                         <div class="col-md-12 col-lg-6 text-center px-0 px-sm-2 order-1 order-md-1">
-                            <img src="{{ asset('images/implantologia/implantologia.png') }}" class="img-fluid">
+                            <img src="{{ asset('images/implantologia/implantologia-2024.png') }}" class="img-fluid">
                             @include('frontend.components.location-payment')
                         </div>
                         <div class="col-md-12 col-lg-6 text-center col-form order-2 order-md-2">
@@ -32,7 +32,7 @@
                                 <div class="card-body py-3 py-md-4 px-3 px-md-4">
                                     <div class="text-start">
                                         <img src="{{ asset('images/limpiezaprofunda/PROMOSMILE_1.svg') }}" class="img-fluid" style="max-width: 100px;">
-                                        <h1 style="font-weight: 900;">TU NUEVA SONRISA</h1>
+                                        <h1 style="font-weight: 900;">TU NUEVA SONRISA SmileArch</h1>
                                         <p class="fw-bold">Implantología</p>
                                         <hr>
                                     </div>
@@ -87,8 +87,33 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 text-start">
-                                            <h1  class="mb-0" style="font-weight: 800; font-size: 35px;"><span style="color:#D9A6E8; font-size:25px;">$</span>689.950</h1>
-                                            <p style="color:#B2B2B2; font-weight: 800; font-size: 19px;">ANTES: $812.500</p>
+                                            <p class="fw-bold">INCLUYE</p>
+                                        </div>
+
+                                        <div class="col-md-8 text-start">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="4/5/6 Implantes">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Limpieza">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Escáner">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="pabellón">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control border-0 servicios" readonly value="Prótesis">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 text-start">
+                                            <h1  class="mb-0" style="font-weight: 800; font-size: 35px;">Desde <span style="color:#D9A6E8; font-size:25px;">$</span>3.990.000</h1>
+                                            <p style="color:#B2B2B2; font-weight: 800; font-size: 19px;">ANTES: $4.990.000</p>
                                         </div>
 
                                         <div class="col-md-8 text-start">
@@ -98,6 +123,9 @@
                                                     QUIERO MI PROMO
                                                 </button>
                                             </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p>*Promoción valida por el mes de Agosto 2024</p>
                                         </div>
                                     </div>
                                     <div class="row">
