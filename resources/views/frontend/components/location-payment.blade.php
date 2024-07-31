@@ -2,14 +2,7 @@
 <div class="row landing-aside landing-aside--blue px-lg-5">
     <div class="card shadow">
         <div class="card-body text-start">
-            <p class="small">Nos enorgullece ofrecer servicios de implantología de primera categoría, diseñados para devolver la confianza y funcionalidad a tu sonrisa.</p>
-            <p class="small">Incluye:</p>
-            <ul class="small">
-                <li>Instalación de implantes Neodent</li>
-                <li>Realización en un moderno pabellón quirúrgico</li>
-                <li>Colocación de la corona definitiva</li>
-            </ul>
-            <p class="small">¡Agenda tu consulta hoy mismo!</p>
+            <p class="small">Somos especialistas en ofrecer soluciones avanzadas para la rehabilitación dental , destacando nuestro servicio de implantes SmileArch. Con un sistema de implantes de última generación que utiliza la tecnología de Neodent® para proporcionar una solución optimizada a los pacientes con necesidades de rehabilitación dental . Gracias a su diseño avanzado, los implantes SmileArch permiten realizar tratamientos fijos inmediatos, brindando resultados rápidos y efectivos.</p>
         </div>
     </div>
 </div>
