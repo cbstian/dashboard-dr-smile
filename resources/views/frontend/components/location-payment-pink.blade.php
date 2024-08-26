@@ -2,9 +2,9 @@
 <div class="row landing-aside landing-aside--pink mt-4 px-lg-5">
     <div class="card shadow">
         <div class="card-body text-start">
-            <p class="small">¡Potencia tu belleza con nuestros <b>tratamientos de estética facial</b> en Dr. Smile! Nos especializamos en <b>rejuvenecimiento facial</b>, ofreciendo tratamientos personalizados que destacan tu belleza natural.</p>
-            <p class="small">Nuestros procedimientos de <b>toxina botulínica</b> para la atenuación de arrugas y la relajación muscular no solo suavizan las arrugas existentes, sino que también previenen la formación de nuevas.</p>
-            <p class="small">Con resultados duraderos de 3 a 6 meses, nuestros <b>tratamientos faciales</b> personalizados que destacan tu belleza natural. ¡Agenda tu cita y descubre la confianza que mereces!</p>
+            <p class="h6">¡Potencia tu belleza con nuestros <b>tratamientos de estética facial</b> en Dr. Smile! Nos especializamos en <b>rejuvenecimiento facial</b>, ofreciendo tratamientos personalizados que destacan tu belleza natural.</p>
+            <p class="h6">Nuestros procedimientos de <b>toxina botulínica</b> para la atenuación de arrugas y la relajación muscular no solo suavizan las arrugas existentes, sino que también previenen la formación de nuevas.</p>
+            <p class="h6">Con resultados duraderos de 3 a 6 meses, nuestros <b>tratamientos faciales</b> personalizados que destacan tu belleza natural. ¡Agenda tu cita y descubre la confianza que mereces!</p>
         </div>
     </div>
 </div>
@@ -14,9 +14,9 @@
 <div class="row landing-aside landing-aside--pink mt-4 px-lg-5">
     <div class="card shadow">
         <div class="card-body text-start">
-            <p class="small">¡Potencia tu belleza con nuestros <b>tratamientos de estética facial</b> en Dr. Smile! Nos especializamos en <b>rejuvenecimiento facial</b>, ofreciendo tratamientos personalizados que destacan tu belleza natural.</p>
-            <p class="small">Nuestros procedimientos de <b>toxina botulínica</b> para la atenuación de arrugas y la relajación muscular no solo suavizan las arrugas existentes, sino que también previenen la formación de nuevas.</p>
-            <p class="small">Con resultados duraderos de 3 a 6 meses, nuestros <b>tratamientos faciales</b> personalizados que destacan tu belleza natural. ¡Agenda tu cita y descubre la confianza que mereces!</p>
+            <p class="h6">¡Potencia tu belleza con nuestros <b>tratamientos de estética facial</b> en Dr. Smile! Nos especializamos en <b>rejuvenecimiento facial</b>, ofreciendo tratamientos personalizados que destacan tu belleza natural.</p>
+            <p class="h6">Nuestros procedimientos de <b>toxina botulínica</b> para la atenuación de arrugas y la relajación muscular no solo suavizan las arrugas existentes, sino que también previenen la formación de nuevas.</p>
+            <p class="h6">Con resultados duraderos de 3 a 6 meses, nuestros <b>tratamientos faciales</b> personalizados que destacan tu belleza natural. ¡Agenda tu cita y descubre la confianza que mereces!</p>
         </div>
     </div>
 </div>
